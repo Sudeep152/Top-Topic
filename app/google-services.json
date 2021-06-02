@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "686787867171",
+    "project_id": "toptopic-3493a",
+    "storage_bucket": "toptopic-3493a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686787867171:android:abc728872999d717967796",
+        "android_client_info": {
+          "package_name": "com.shashank.toptopic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686787867171-knok97aeche01lejs67v74ldmecuu2i7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shashank.toptopic",
+            "certificate_hash": "a7ceaabd108923a0a2f682e0997098b72ac57800"
+          }
+        },
+        {
+          "client_id": "686787867171-om6s9ejpl67ing8bu3ot48t24tg3v4eo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCR2bTNeteFPMY8PRIMs7d5w8p0gizC3TY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686787867171-om6s9ejpl67ing8bu3ot48t24tg3v4eo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
