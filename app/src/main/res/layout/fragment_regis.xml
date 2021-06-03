@@ -70,10 +70,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@drawable/buttonbg"
                 android:hint="Email"
-                app:boxBackgroundColor="#FFFEFE"
-                app:boxStrokeColor="@color/purple_700">
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/black"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
 
@@ -84,12 +86,13 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/nameEdt"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="Name"
-                app:boxBackgroundColor="#FFFEFE"
-                app:boxStrokeColor="@color/purple_700">
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -101,10 +104,11 @@
                 android:id="@+id/passEdt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_margin="10dp"
                 android:hint="Password"
-                app:boxBackgroundColor="#FFFEFE"
-                app:boxStrokeColor="@color/purple_700"
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/black"
                 app:passwordToggleDrawable="@drawable/ic_baseline_remove_red_eye_24"
                 app:passwordToggleEnabled="true">
 
@@ -118,10 +122,11 @@
                 android:id="@+id/rePassEdt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_margin="10dp"
                 android:hint="Renter Password"
-                app:boxBackgroundColor="#FFFEFE"
-                app:boxStrokeColor="@color/purple_700"
+                app:boxStrokeColor="@color/black"
+                app:hintTextColor="@color/black"
                 app:passwordToggleDrawable="@drawable/ic_baseline_remove_red_eye_24"
                 app:passwordToggleEnabled="true">
 
