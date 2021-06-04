@@ -35,7 +35,13 @@ class DefaultAuthRepository:AuthRepository {
 
     override suspend fun login(email: String, password: String): Resource<AuthResult> {
 
-      TODO()
+        return  withContext(Dispatchers.IO){
+            safeCall {
+                val result = mAuth.signInWithEmailAndPassword(email,password).await()
+                Resource.Success(result)
+            }
+        }
+
 
     }
 }

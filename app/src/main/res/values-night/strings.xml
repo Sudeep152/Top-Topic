@@ -2,7 +2,7 @@
 <resources>
     <string name="hello">Hello,</string>
     <string name="signup_now">Signup Now.</string>
-    <string name="app_name">Philbook</string>
+    <string name="app_name">TopTopic</string>
     <string name="your_profile">Your Profile</string>
     <string name="home">Home</string>
     <string name="search">Search</string>
