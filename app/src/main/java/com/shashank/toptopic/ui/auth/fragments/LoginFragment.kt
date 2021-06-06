@@ -12,15 +12,20 @@ import com.shashank.toptopic.ui.auth.AuthViewModel
 import com.shashank.toptopic.ui.snakebar
 import kotlinx.android.synthetic.main.fragment_login.*
 
+
 class LoginFragment : Fragment(R.layout.fragment_login) {
 
     lateinit var viewModel :AuthViewModel
     private lateinit var process: ProgressDialog
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         process = ProgressDialog(context)
-        process.setTitle("Loading...")
+        process.setMessage("Loading...")
+
+
         viewModel = ViewModelProvider(requireActivity()).get(AuthViewModel::class.java)
 
         subscribeToObserver()
@@ -44,17 +49,23 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
         viewModel.loginStatus.observe(viewLifecycleOwner,EventObserver(
             onError = {
-                process.dismiss()
+               process.dismiss()
+
                 snakebar(it)
             }
         ,onLoading = {
+
+
                      process.show()
 
             },onSuccess = {
                 process.dismiss()
+
                   snakebar("Successfully login ")
             }
         ))
     }
+
+
 
 }
