@@ -25,7 +25,7 @@ class RegisFragment : Fragment(R.layout.fragment_regis) {
         super.onViewCreated(view, savedInstanceState)
 
         process = ProgressDialog(context)
-        process.setTitle("Loading...")
+        process.setMessage("Loading...")
 
         viewModel= ViewModelProvider(requireActivity()).get(AuthViewModel::class.java)
 

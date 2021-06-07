@@ -1,11 +1,13 @@
 package com.shashank.toptopic.ui.auth.fragments
 
 import android.app.ProgressDialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.shashank.toptopic.main.MainActivity
 import com.shashank.toptopic.R
 import com.shashank.toptopic.other.EventObserver
 import com.shashank.toptopic.ui.auth.AuthViewModel
@@ -60,7 +62,10 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
             },onSuccess = {
                 process.dismiss()
-
+                   Intent(requireContext(), MainActivity::class.java).also {
+                       startActivity(it)
+                       requireActivity().finish()
+                   }
                   snakebar("Successfully login ")
             }
         ))
