@@ -92,5 +92,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore'
     implementation 'com.google.firebase:firebase-storage'
 
+    implementation 'com.github.simformsolutions:SSCustomBottomNavigation:1.0'
+
 }
 apply plugin: 'com.google.gms.google-services'
