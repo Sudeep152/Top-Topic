@@ -19,7 +19,7 @@ class AuthActivity : AppCompatActivity() {
             Intent(this, MainActivity::class.java).also {
                 startActivity(it)
                 finish()
-                Toast.makeText(this, "Welcome", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Welcome back", Toast.LENGTH_SHORT).show()
             }
         }
     }

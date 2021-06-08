@@ -7,7 +7,7 @@ import com.shashank.toptopic.other.const.DEFAULT_PROFILE_PICTURE
 data class User(
     val uid:String = "",
     val username:String="",
-    val profilePictureUrl:String =DEFAULT_PROFILE_PICTURE,
+    val profilePictureUrl:String = DEFAULT_PROFILE_PICTURE,
     val description:String="",
     val followers:List<String> = listOf(),
     @Exclude
