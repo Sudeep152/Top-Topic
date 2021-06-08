@@ -24,8 +24,9 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        process = ProgressDialog(context)
+        process= ProgressDialog(context,R.style.Base_ThemeOverlay_MaterialComponents_MaterialAlertDialog)
         process.setMessage("Loading...")
+        process.setCancelable(false)
 
 
         viewModel = ViewModelProvider(requireActivity()).get(AuthViewModel::class.java)

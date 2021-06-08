@@ -24,9 +24,9 @@ class RegisFragment : Fragment(R.layout.fragment_regis) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        process = ProgressDialog(context)
+        process= ProgressDialog(context,R.style.Base_ThemeOverlay_MaterialComponents_MaterialAlertDialog)
         process.setMessage("Loading...")
-
+        process.setCancelable(false)
         viewModel= ViewModelProvider(requireActivity()).get(AuthViewModel::class.java)
 
         subscribeToObservers()

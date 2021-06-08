@@ -10,7 +10,7 @@ data class User(
     val profilePictureUrl:String = DEFAULT_PROFILE_PICTURE,
     val description:String="",
     val followers:List<String> = listOf(),
-    @Exclude
+     @get:Exclude
     var onFollowing:Boolean = false
 
 )
