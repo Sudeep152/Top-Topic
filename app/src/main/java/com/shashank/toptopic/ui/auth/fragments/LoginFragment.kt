@@ -7,10 +7,11 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.shashank.toptopic.main.MainActivity
+import com.shashank.toptopic.ui.main.MainActivity
 import com.shashank.toptopic.R
 import com.shashank.toptopic.other.EventObserver
 import com.shashank.toptopic.ui.auth.AuthViewModel
+import com.shashank.toptopic.ui.slideUAllView
 import com.shashank.toptopic.ui.snakebar
 import kotlinx.android.synthetic.main.fragment_login.*
 
@@ -28,6 +29,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         process.setMessage("Loading...")
         process.setCancelable(false)
 
+        slideUAllView(requireContext(),emailEdt,passEdt,loginbtn,textgotoregister)
 
         viewModel = ViewModelProvider(requireActivity()).get(AuthViewModel::class.java)
 

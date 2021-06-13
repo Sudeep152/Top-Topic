@@ -1,4 +1,4 @@
-package com.shashank.toptopic.main.fragments
+package com.shashank.toptopic.ui.main.fragments
 
 import androidx.fragment.app.Fragment
 import com.shashank.toptopic.R

@@ -1,4 +1,4 @@
-package com.shashank.toptopic.main
+package com.shashank.toptopic.ui.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

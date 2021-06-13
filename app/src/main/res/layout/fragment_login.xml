@@ -94,7 +94,6 @@
                 app:boxBackgroundColor="#FFFEFE"
                 app:boxStrokeColor="@color/black"
                 app:hintTextColor="@color/black"
-                app:passwordToggleDrawable="@drawable/ic_baseline_remove_red_eye_24"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText

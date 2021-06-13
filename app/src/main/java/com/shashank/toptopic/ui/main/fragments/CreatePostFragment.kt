@@ -1,4 +1,4 @@
-package com.shashank.toptopic.main.fragments
+package com.shashank.toptopic.ui.main.fragments
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -15,9 +15,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.github.dhaval2404.imagepicker.ImagePicker
 import com.shashank.toptopic.R
-import com.shashank.toptopic.main.viewmodel.createPostViewModel
+import com.shashank.toptopic.ui.main.viewmodel.createPostViewModel
 import com.shashank.toptopic.other.EventObserver
 import com.shashank.toptopic.ui.auth.AuthViewModel
+import com.shashank.toptopic.ui.slideUAllView
 import com.shashank.toptopic.ui.snakebar
 import com.shashank.toptopic.ui.toast
 import dagger.hilt.android.AndroidEntryPoint
@@ -51,7 +52,7 @@ class CreatePostFragment :Fragment(R.layout.creat_postfragment)  {
         process= ProgressDialog(context,R.style.Base_ThemeOverlay_MaterialComponents_MaterialAlertDialog)
         process.setMessage("Loading...")
         process.setCancelable(false)
-
+        slideUAllView(requireContext(),ivPostImage,btnSetPostImage,tilPostText,btnPost)
 
         btnSetPostImage.setOnClickListener {
 
@@ -74,6 +75,8 @@ class CreatePostFragment :Fragment(R.layout.creat_postfragment)  {
             imageUri?.let { it1 -> viewModel.createPost(it1,etPostDescription.text.toString()) }
 
         }
+
+
 
     }
 

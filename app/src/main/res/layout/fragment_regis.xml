@@ -66,12 +66,13 @@
             tools:layout_editor_absoluteX="10dp">
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt1"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="Email"
 
+                android:hint="Email"
                 app:boxStrokeColor="@color/black"
                 app:hintTextColor="@color/black">
 
@@ -84,6 +85,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt2"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -100,6 +102,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt3"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -107,7 +110,6 @@
                 android:hint="Password"
                 app:boxStrokeColor="@color/black"
                 app:hintTextColor="@color/black"
-                app:passwordToggleDrawable="@drawable/ic_baseline_remove_red_eye_24"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -118,6 +120,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt4"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -125,7 +128,6 @@
                 android:hint="Renter Password"
                 app:boxStrokeColor="@color/black"
                 app:hintTextColor="@color/black"
-                app:passwordToggleDrawable="@drawable/ic_baseline_remove_red_eye_24"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText

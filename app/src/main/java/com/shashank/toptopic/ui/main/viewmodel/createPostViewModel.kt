@@ -1,4 +1,4 @@
-package com.shashank.toptopic.main.viewmodel
+package com.shashank.toptopic.ui.main.viewmodel
 
 import android.content.Context
 import android.net.Uri

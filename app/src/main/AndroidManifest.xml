@@ -18,7 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TopTopic"
         tools:ignore="MissingClass">
-        <activity android:name=".main.MainActivity"/>
+        <activity android:name=".ui.main.MainActivity"/>
 
         <activity android:name=".AuthActivity">
             <intent-filter>

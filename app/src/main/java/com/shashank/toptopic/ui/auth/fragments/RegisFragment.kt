@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.shashank.toptopic.R
 import com.shashank.toptopic.other.EventObserver
 import com.shashank.toptopic.ui.auth.AuthViewModel
+import com.shashank.toptopic.ui.slideUAllView
 import com.shashank.toptopic.ui.snakebar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_regis.*
@@ -24,6 +25,7 @@ class RegisFragment : Fragment(R.layout.fragment_regis) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        slideUAllView(requireContext(),txt1,txt2,txt3,txt4,regbtn,textgotologin)
         process= ProgressDialog(context,R.style.Base_ThemeOverlay_MaterialComponents_MaterialAlertDialog)
         process.setMessage("Loading...")
         process.setCancelable(false)
