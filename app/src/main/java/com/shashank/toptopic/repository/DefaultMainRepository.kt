@@ -6,6 +6,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.shashank.toptopic.data.entites.Post
+import com.shashank.toptopic.data.entites.User
 import com.shashank.toptopic.other.Resource
 import com.shashank.toptopic.other.safeCall
 import dagger.hilt.android.scopes.ActivityScoped
@@ -42,4 +43,18 @@ class DefaultMainRepository :MainRepository {
         }
 
     }
+
+    override suspend fun getAllUser(userUidS: List<String>): Resource<List<User>> = withContext(Dispatchers.IO){
+
+        safeCall {
+
+            val usersList = users.whereIn("uid",userUidS).orderBy("username").get().await().toObjects(User::class.java)
+            Resource.Success(usersList)
+        }
+
+
+    }
+
+
+
 }
