@@ -44,17 +44,26 @@ class DefaultMainRepository :MainRepository {
 
     }
 
-    override suspend fun getAllUser(userUidS: List<String>): Resource<List<User>> = withContext(Dispatchers.IO){
 
+    override suspend fun getUsers(uids: List<String>) = withContext(Dispatchers.IO) {
         safeCall {
-
-            val usersList = users.whereIn("uid",userUidS).orderBy("username").get().await().toObjects(User::class.java)
+            val usersList = users.whereIn("uid", uids).orderBy("username").get().await()
+                .toObjects(User::class.java)
             Resource.Success(usersList)
         }
-
-
     }
 
+    override suspend fun getUser(uid: String) = withContext(Dispatchers.IO) {
+        safeCall {
+            val user = users.document(uid).get().await().toObject(User::class.java)
+                ?: throw IllegalStateException()
+            val currentUid = FirebaseAuth.getInstance().uid!!
+            val currentUser = users.document(currentUid).get().await().toObject(User::class.java)
+                ?: throw IllegalStateException()
+            user.isFollowing = uid in currentUser.follows
+            Resource.Success(user)
+        }
+    }
 
 
 }
